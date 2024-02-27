@@ -4,3 +4,5 @@
 \
 Made by [KPI](https://kpi.ua) [FICE](https://fiot.kpi.ua) students of the **IM-22** group:
 
+
+- Yatsenko Maksym <code>[yatsenkoM](https://github.com/yatsenkoM)</code>
