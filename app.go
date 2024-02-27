@@ -34,7 +34,6 @@ func Home(w http.ResponseWriter, r *http.Request) {
 	_, err := fmt.Fprint(w, "Лабораторна робота 1")
 	if err != nil {
 		fmt.Println("Cannot write the response:", err)
-		return
 	}
 }
 
@@ -48,7 +47,6 @@ func Time(w http.ResponseWriter, r *http.Request) {
 	_, err = fmt.Fprint(w, jsonTime)
 	if err != nil {
 		fmt.Println("Cannot write the response:", err)
-		return
 	}
 }
 
