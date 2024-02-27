@@ -15,6 +15,7 @@ const (
 
 type Dictionary map[string]interface{}
 
+// ToJSON is Dictionary method that converts it to a JSON string
 func (dict Dictionary) ToJSON() (string, error) {
 	jsonData, err := json.MarshalIndent(dict, "", "  ")
 	if err != nil {
@@ -23,10 +24,12 @@ func (dict Dictionary) ToJSON() (string, error) {
 	return string(jsonData), nil
 }
 
+// GetCurrentTime returns current server time
 func GetCurrentTime() string {
 	return time.Now().Format(time.RFC3339)
 }
 
+// Home handles `GET /` HTTP request
 func Home(w http.ResponseWriter, r *http.Request) {
 	_, err := fmt.Fprint(w, "Лабораторна робота 1")
 	if err != nil {
@@ -35,6 +38,7 @@ func Home(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+// Time handles `GET /time` HTTP request
 func Time(w http.ResponseWriter, r *http.Request) {
 	jsonTime, err := Dictionary{"time": GetCurrentTime()}.ToJSON()
 	if err != nil {
@@ -49,9 +53,11 @@ func Time(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	// Basic routing
 	http.HandleFunc("/", Home)
 	http.HandleFunc("/time", Time)
 
+	// Starting the server
 	address := ip + ":" + strconv.Itoa(port)
 	fmt.Println("Server is listening on", address)
 	err := http.ListenAndServe(address, nil)
