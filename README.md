@@ -4,4 +4,5 @@
 \
 Made by [KPI](https://kpi.ua) [FICE](https://fiot.kpi.ua) students of the **IM-22** group:
 - Horchynskyi Nazarii <code>[horchynskyi](https://github.com/Nazg0r)</code>
-- Kushnir Mykola <code>[kushnirko](https://github.com/kushnirko)</code> 
+- Kushnir Mykola <code>[kushnirko](https://github.com/kushnirko)</code>
+- Yatsenko Maksym <code>[yatsenkoM](https://github.com/yatsenkoM)</code>
